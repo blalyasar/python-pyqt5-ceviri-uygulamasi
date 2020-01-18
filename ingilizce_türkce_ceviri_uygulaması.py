@@ -23,7 +23,7 @@ class Pencere(QWidget):
         self.yazi1 = QLabel("İngilizce Metin Giriniz: ")
         self.yazi1.setFont(QFont("Helvetica",15,QFont.Bold))
 
-        self.yazi2 = QLabel("Türkçe Çevirisi: ")
+        self.yazi2 = QLabel("Türkçe Metin Giriniz: ")
         self.yazi2.setFont(QFont("Robota",15,QFont.Bold))
 
 
@@ -68,7 +68,7 @@ class Pencere(QWidget):
             self.sonuc.setText(cevir1)
 
         elif self.r2.isChecked():
-
+            
             cümle2 = self.giris2.text()
             text2 = TextBlob(cümle2)  
             cevir2 = text2.translate(from_lang="tr", to="en")
